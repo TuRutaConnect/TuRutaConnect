@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { locationsService } from '../services/api';
+import mapData from '../data/mapData.json';
 
 const LocationsContext = createContext();
 
@@ -17,8 +17,8 @@ export const LocationsProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const result = await locationsService.getAll();
-        setData(result);
+        // Loading directly from imported JSON
+        setData(mapData); git
         setError(null);
       } catch (err) {
         console.error('Error fetching locations:', err);
