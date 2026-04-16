@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../../components/layout/Navbar';
 import InteractiveMap from '../../components/maps/InteractiveMap';
 import Button from '../../components/ui/Button';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +12,10 @@ const MapPage = () => {
   const [activeFilter, setActiveFilter] = useState('');
   const navigate = useNavigate();
 
+
+
   return (
+
     <div className="relative h-[calc(100vh-80px)] min-h-[500px] w-full overflow-hidden flex flex-col bg-neutral-100">
       {/* Map Content - Fills the entire view */}
       <div className="flex-grow w-full h-full relative overflow-hidden ring-1 ring-neutral-200">

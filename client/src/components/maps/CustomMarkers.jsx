@@ -4,14 +4,14 @@ import L from 'leaflet';
  * Generates a custom Leaflet icon based on the dynamic categories.
  */
 export const createCustomIcon = (category, categoryStyles) => {
-  const defaultStyle = { color: "#64748b", icon: "📍" };
+
+  const defaultStyle = { color: "#ce7a20ff", iconSvg: "<i class='fa-solid fa-location-dot'></i>" };
   const style = categoryStyles?.[category] || defaultStyle;
-  
+
   const svgTemplate = `
     <div style="
-      background-color: ${style.color};
-      width: 42px;
-      height: 42px;
+      width: 25px;
+      height: 25px;
       border-radius: 50% 50% 50% 0;
       transform: rotate(-45deg);
       display: flex;
@@ -19,13 +19,14 @@ export const createCustomIcon = (category, categoryStyles) => {
       justify-content: center;
       border: 3px solid white;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      background[hover]: #ce7a20ff;
     ">
       <div style="
         transform: rotate(45deg);
-        font-size: 22px;
+        font-size: 20px;
         filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
       ">
-        ${style.icon}
+        ${style.iconSvg}
       </div>
     </div>
   `;
