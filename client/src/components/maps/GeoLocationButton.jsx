@@ -19,13 +19,13 @@ const GeoLocationButton = () => {
 
   return (
     <div className="absolute bottom-28 right-4 z-[1000]">
-      <Button 
-        variant="secondary" 
+      <Button
+        variant="secondary"
         className="w-12 h-12 !p-0 rounded-full shadow-large flex items-center justify-center hover:scale-110 active:scale-95 transition-all"
         title="Mi Ubicación"
         onClick={handleLocate}
       >
-        <span className="text-xl">📍</span>
+        <span className="text-xl bg-red"><i className="fa-solid fa-location-dot"></i></span>
       </Button>
     </div>
   );

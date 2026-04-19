@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../components/ui/Button';
 import SearchInput from '../../components/ui/SearchInput';
 import Card from '../../components/ui/Card';
+import Carousel from '../../components/ui/Carousel';
 import { useLocations } from '../../context/LocationsContext';
 
 const Home = () => {
@@ -25,16 +26,13 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110 active:scale-100"
-          style={{
-            backgroundImage: `url('/hero-baru.png')`,
-            backgroundBlendMode: 'overlay',
-          }}
-        >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-neutral-900/90" />
-        </div>
+        <Carousel
+          images={[
+            'https://i.imgur.com/Z5eLiEj.jpg',
+            'https://i.imgur.com/AEtvOjb.jpg',
+            'https://i.imgur.com/dSrjWEJ.jpg'
+          ]}
+        />
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 text-center animate-fade-in">
@@ -62,9 +60,14 @@ const Home = () => {
                 <button
                   key={catId}
                   onClick={() => handleCategoryClick(catId)}
-                  className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white font-semibold hover:bg-white/20 transition-all active:scale-95 group"
+                  className="flex items-center gap-2 px-6 py-3  border border-white/20 rounded-full text-white font-semibold transition-all active:scale"
                 >
-                  <span className="text-xl group-hover:scale-125 transition-transform">{categoryStyles[catId].icon}</span>
+
+                  <span
+                    className="text-xl group-hover:scale-125 transition-transform w-6 h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:fill-current"
+                    dangerouslySetInnerHTML={{ __html: categoryStyles[catId].iconSvg }}
+                  >
+                  </span>
                   <span>{categoryStyles[catId].label}</span>
                 </button>
               ))}
@@ -74,6 +77,7 @@ const Home = () => {
       </section>
 
       {/* Featured Explorations Preview */}
+
       <section className="py-24 bg-neutral-50 px-6">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -99,8 +103,8 @@ const Home = () => {
                   <Card.Image src={item.imagen} alt={item.nombre} className="h-64 object-cover" />
                   <Card.Content>
                     <div className="flex justify-between items-start mb-2">
-                      <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`} 
-                            style={{ backgroundColor: categoryStyles[item.categoria_id]?.color + '20', color: categoryStyles[item.categoria_id]?.color }}>
+                      <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`}
+                        style={{ backgroundColor: categoryStyles[item.categoria_id]?.color + '20', color: categoryStyles[item.categoria_id]?.color }}>
                         {categoryStyles[item.categoria_id]?.label || item.categoria_id}
                       </span>
                     </div>
