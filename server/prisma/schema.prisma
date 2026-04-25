@@ -30,20 +30,46 @@ model Categoria {
   serviciosFrontera  ServicioFronterizo[]
 }
 
+model MapConfig {
+  id          Int      @id @default(autoincrement())
+  center      Json     // [lat, lng] array
+  zoom        Int
+  styles      Json     // categoryStyles object
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
 model LugarTuristico {
-  id              Int      @id @default(autoincrement())
-  nombre          String
-  titulo          String?
-  descripcion_det Json?    // Groups: identificacion, descripcion_det, geospacial, etc.
-  latitud         Float
-  longitud        Float
-  imagen          String?
-  logo            String?
-  verified        Boolean  @default(false)
-  categoria       Categoria @relation(fields: [categoriaId], references: [id])
-  categoriaId     Int
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id                    Int       @id @default(autoincrement())
+  nombre                String
+  titulo                String?
+  latitud               Float
+  longitud              Float
+  imagen                String?
+  logo                  String?
+  verified              Boolean   @default(false)
+  categoria             Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId           Int
+  
+  identificacion        Json?
+  descripcion_det       Json?
+  geospacial            Json?
+  acceso_transporte     Json?
+  requisitos_entrada    Json?
+  clima_ambiente        Json?
+  seguridad_det         Json?
+  servicios_basicos_det Json?
+  actividades_turisticas Json?
+  alojamiento_det       Json?
+  gastronomia_det       Json?
+  horarios_operacion    Json?
+  tarifas_costos        Json?
+  personal_guias        Json?
+  biodiversidad         Json?
+  visibilidad_mediatica Json?
+
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
 }
 
 model Emprendimiento {

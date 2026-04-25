@@ -65,6 +65,7 @@ BACKEND:
 - Node.js + Express (API REST - Doc 2, Sec 2)
 - PostgreSQL (Base de datos relacional - Doc 1, Sec 3.2)
 - Prisma o Sequelize (ORM - Doc 2, Sec 2)
+- Vercel (Despliegue del - Doc 2, Sec 3)
 - JWT (Autenticación con tokens de acceso y refresco - Doc 2, Sec 3)
 - Bcrypt (Encriptación de contraseñas - Doc 2, Sec 3)
 
@@ -76,7 +77,7 @@ SERVICIOS EXTERNOS:
 DESPLIEGUE:
 -----------
 - Frontend: Vercel o Netlify (Doc 2, Sec 3)
-- Backend: Railway o Render (Doc 2, Sec 3)
+- Backend: Railway o Vercel (Doc 2, Sec 3)
 - Contenedores: Docker (opcional - Doc 2, Sec 3)
 
 ================================================================================
