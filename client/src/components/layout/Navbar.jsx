@@ -20,15 +20,15 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <div 
-          className="flex items-center gap-2 cursor-pointer" 
+        <div
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate('/')}
         >
           <div className="w-10 h-10 bg-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-xl">
             F
           </div>
           <span className="font-heading font-extrabold text-xl tracking-tight text-neutral-900 border-none">
-            FRONTERA<span className="text-primary-800">VIVA</span>
+            Tu<span className="text-primary-800">Ruta</span>
           </span>
         </div>
 
@@ -38,11 +38,10 @@ const Navbar = () => {
             <button
               key={link.path}
               onClick={() => navigate(link.path)}
-              className={`text-sm font-bold uppercase tracking-widest transition-all ${
-                isActive(link.path) 
-                  ? 'text-primary-800 border-b-2 border-primary-800 pb-1' 
+              className={`text-sm font-bold uppercase tracking-widest transition-all ${isActive(link.path)
+                  ? 'text-primary-800 border-b-2 border-primary-800 pb-1'
                   : 'text-neutral-500 hover:text-primary-800'
-              }`}
+                }`}
             >
               {link.name}
             </button>
@@ -60,7 +59,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-neutral-900"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -84,9 +83,8 @@ const Navbar = () => {
                 navigate(link.path);
                 setIsMenuOpen(false);
               }}
-              className={`text-lg font-bold text-left ${
-                isActive(link.path) ? 'text-primary-800' : 'text-neutral-600'
-              }`}
+              className={`text-lg font-bold text-left ${isActive(link.path) ? 'text-primary-800' : 'text-neutral-600'
+                }`}
             >
               {link.name}
             </button>

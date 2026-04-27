@@ -37,7 +37,7 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 text-center animate-fade-in">
           <h1 className="text-4xl md:text-7xl font-heading font-extrabold text-white mb-6 drop-shadow-large">
-            FRONTERA <span className="text-primary-400">VIVA</span>
+            Tu<span className="text-primary-400">Ruta</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto font-body font-medium drop-shadow-soft">
             Descubre, conecta y explora el potencial de nuestra región fronteriza.
