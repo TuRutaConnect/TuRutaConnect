@@ -24,7 +24,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate('/')}
         >
-          <div className="w-10 h-10 bg-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-xl">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-xl">
             <img className='' src="public/web-fondo.png" alt="Tu Ruta Icon" />
           </div>
           <span className="font-heading font-extrabold text-xl tracking-tight text-neutral-900 border-none">
