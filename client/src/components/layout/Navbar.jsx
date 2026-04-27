@@ -25,7 +25,7 @@ const Navbar = () => {
           onClick={() => navigate('/')}
         >
           <div className="w-10 h-10 bg-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-xl">
-            F
+            <img className='' src="../src/assets/TuRutoIcon.png" alt="Tu Ruta Icon" />
           </div>
           <span className="font-heading font-extrabold text-xl tracking-tight text-neutral-900 border-none">
             Tu<span className="text-primary-800">Ruta</span>
@@ -39,8 +39,8 @@ const Navbar = () => {
               key={link.path}
               onClick={() => navigate(link.path)}
               className={`text-sm font-bold uppercase tracking-widest transition-all ${isActive(link.path)
-                  ? 'text-primary-800 border-b-2 border-primary-800 pb-1'
-                  : 'text-neutral-500 hover:text-primary-800'
+                ? 'text-primary-800 border-b-2 border-primary-800 pb-1'
+                : 'text-neutral-500 hover:text-primary-800'
                 }`}
             >
               {link.name}
