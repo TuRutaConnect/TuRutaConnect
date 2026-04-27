@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="md:col-span-1 flex flex-col">
           <div className="flex items-center gap-3 mb-5 pointer-events-none select-none">
             {/* Nota: Si usas colores custom en tailwind.config, cambia bg-emerald-600 por bg-primary-800 */}
-            <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-900/30 ring-1 ring-white/10">
-              F
+            <div className="w-10 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-900/30 ring-1 ring-white/10">
+              <img src="public/favicon-512x512.png" alt="Tu Ruta Icon" />
             </div>
             <span className="font-heading font-extrabold text-xl tracking-tight text-white">
-              FRONTERA<span className="text-emerald-400">VIVA</span>
+              <span className="text-emerald-400">TU</span>Ruta
             </span>
           </div>
           <p className="text-neutral-400 text-sm leading-relaxed mb-6 font-body max-w-xs">
@@ -72,7 +72,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-neutral-500 text-xs uppercase tracking-wider font-medium">
-        <p>Copyright © 2026 Frontera Viva. Todos los derechos reservados.</p>
+        <p>Copyright © 2026 Tu Ruta. Todos los derechos reservados.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <a href="#" className="hover:text-neutral-300 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400">Términos</a>
           <a href="#" className="hover:text-neutral-300 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400">Privacidad</a>
