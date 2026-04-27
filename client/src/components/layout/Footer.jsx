@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex items-center gap-3 mb-5 pointer-events-none select-none">
             {/* Nota: Si usas colores custom en tailwind.config, cambia bg-emerald-600 por bg-primary-800 */}
             <div className="w-10 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-900/30 ring-1 ring-white/10">
-              <img src="public/favicon-512x512.png" alt="Tu Ruta Icon" />
+              <img src="public/web-fondo.png" alt="Tu Ruta Icon" />
             </div>
             <span className="font-heading font-extrabold text-xl tracking-tight text-white">
               <span className="text-emerald-400">TU</span>Ruta
