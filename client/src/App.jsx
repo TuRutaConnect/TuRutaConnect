@@ -22,11 +22,11 @@ function App() {
         <Route path="/map" element={<PublicLayout><MapPage /></PublicLayout>} />
         <Route path="/details/:id" element={<PublicLayout><DetailsPage /></PublicLayout>} />
         <Route path="/border-info" element={<PublicLayout><BorderInfo /></PublicLayout>} />
-        <Route path="/postulate" element={<PublicLayout><Postulate /></PublicLayout>} />
+
 
         {/* Admin Routes - Maintain dedicated layout if needed later */}
-        <Route path="/admin/login" element={<Login />} />
-        <Route path="/admin" element={<Dashboard />} />
+
+
       </Routes>
     </Router>
   );

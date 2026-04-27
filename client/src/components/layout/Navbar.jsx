@@ -48,7 +48,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Action Buttons */}
+        {/* Action Buttons
         <div className="hidden md:flex items-center gap-4">
           <Button variant="ghost" size="sm" onClick={() => navigate('/admin/login')}>
             Ingresar
@@ -56,7 +56,7 @@ const Navbar = () => {
           <Button variant="primary" size="sm" onClick={() => navigate('/postulate')}>
             Postularse
           </Button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -89,14 +89,17 @@ const Navbar = () => {
               {link.name}
             </button>
           ))}
+
           <div className="h-px bg-neutral-100 my-2" />
-          <Button variant="outline" onClick={() => navigate('/admin/login')}>
+          {/* <Button variant="outline" onClick={() => navigate('/admin/login')}>
             Ingresar Administrador
-          </Button>
+          </Button> */}
           <Button variant="primary" onClick={() => navigate('/postulate')}>
             Postularse
           </Button>
+
         </div>
+
       )}
     </nav>
   );
